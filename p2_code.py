@@ -14,6 +14,15 @@ intercept = params[1]
 ##EXERCISE 1
 y_units='mm'
 x_units='g'
-print_equation(slope,intercept,y_units,x_units)
+print_equation(slope,intercept,y_units,x_units)# the equation is y=-0.0524mm/g x +62 mm
+
+##EXERCISE 2
+fig = plt.figure()
+plt.scatter(x, y, label='LineFit')
+plt.plot(x, linear(x, slope, intercept),label='Linear Fit') #change this label if you have a non-linear fit
+plt.legend(loc='best')
+plt.xlabel("time (s)") #change the units as appropriate
+plt.ylabel("distance in x direction (meters)")  #change the units as appropriate
+plt.show()
 
 
